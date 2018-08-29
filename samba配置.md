@@ -1,9 +1,15 @@
 # Ubuntu16.04下搭建samba
 ## 1.安装samba
+
++ 安装samba：
 ```
-+ 安装samba：sudo apt-get install samba
-+ 安装smbclient：sudo apt-get install smbclient
+sudo apt-get install samba
 ```
++ 安装smbclient：
+```
+sudo apt-get install smbclient
+```
+
 
 ## 2.修改配置文件
 ### 如果是想设置一个无需验证的任何人都可以访问的共享文件夹
@@ -75,7 +81,7 @@ kc@tyc-virtual-machine:/home#  groupadd share -g 6000
 
 # 实现linux与liunx之间
 ```
-sudo ount -t cifs //192.168.13.41/share ~/yanhogn.jia/datasets -o username=share,password=Kc123456,sec=ntlmssp
+sudo mount -t cifs //192.168.13.41/share ~/yanhong.jia/datasets -o username=share,password=Kc123456,sec=ntlmssp
 ```
 # 附加
 为了增加系统的安全性，该文件夹只想给share用户有读写权限即可!
